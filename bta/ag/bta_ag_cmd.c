@@ -334,7 +334,7 @@ static void bta_ag_send_result(tBTA_AG_SCB *p_scb, UINT8 code, char *p_arg,
     UINT16  len;
 
 #if defined(BTA_AG_RESULT_DEBUG) && (BTA_AG_RESULT_DEBUG == TRUE)
-    memset(buf, NULL, sizeof(buf));
+    memset(buf, 0, sizeof(buf));
 #endif
     /* init with \r\n */
     *p++ = '\r';
