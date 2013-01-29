@@ -1182,7 +1182,7 @@ static void btif_dm_upstreams_evt(UINT16 event, char* p_param)
 
             /*special handling for HID devices */
             #if (defined(BTA_HH_INCLUDED) && (BTA_HH_INCLUDED == TRUE))
-            if (check_cod(&bd_addr, COD_HID_KEYBOARD )|| check_cod(&bd_addr, COD_HID_COMBO) || check_cod(&bd_addr, COD_HID_POINTING)) {
+            if (btif_hh_find_dev_by_bda(&bd_addr) != NULL) {
                 btif_hh_remove_device(bd_addr);
             }
             #endif

@@ -93,6 +93,7 @@ typedef struct
 extern btif_hh_cb_t btif_hh_cb;
 
 extern btif_hh_device_t *btif_hh_find_connected_dev_by_handle(UINT8 handle);
+extern btif_hh_device_t *btif_hh_find_dev_by_bda(bt_bdaddr_t *bd_addr);
 extern void btif_hh_remove_device(bt_bdaddr_t bd_addr);
 extern bt_status_t btif_hh_virtual_unplug(bt_bdaddr_t *bd_addr);
 extern void btif_hh_disconnect(bt_bdaddr_t *bd_addr);

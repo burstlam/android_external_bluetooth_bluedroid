@@ -367,7 +367,7 @@ btif_hh_device_t *btif_hh_find_connected_dev_by_handle(UINT8 handle)
 **
 ** Returns          Device entry pointer in the device table
 *******************************************************************************/
-static btif_hh_device_t *btif_hh_find_dev_by_bda(bt_bdaddr_t *bd_addr)
+btif_hh_device_t *btif_hh_find_dev_by_bda(bt_bdaddr_t *bd_addr)
 {
     UINT32 i;
     for (i = 0; i < BTIF_HH_MAX_HID; i++) {
